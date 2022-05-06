@@ -5,30 +5,23 @@ body {
 }
 
 
-#menu {
-    margin: 0px;
-    background-color: #00ccff;
-    height: 310px;
+#menulinks {
+    background-color: rgb(57, 160, 192);
     display: flex;
-    justify-content: center;
-    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
 }
 
-#cardvenda {
-    width: 250px;
-}
-
-
-#cardestoque {
-    width: 200px;
-}
-
-#cardcliente {
-    width: 200px;
-}
-
-#cardfornecedor {
-    width: 200px;
+#menulinks button {
+    background: #0b5669; 
+    border-radius: 6px; 
+    padding: 15px; 
+    cursor: pointer; 
+    color: #fff; 
+    border: none; 
+    font-size: 20px;
+    margin: 10px;
 }
 
 #imagemfundo {
@@ -41,19 +34,4 @@ footer {
     background-color: rgb(29, 53, 87);
     width: 100%;
     height: 150px;
-}
-
-table {
-    margin-left: 20px;
-}
-
-#botaoSair {
-    background: #0b5669; 
-    border-radius: 6px; 
-    padding: 15px; 
-    cursor: pointer; 
-    color: #fff; 
-    border: none; 
-    font-size: 20px;
-    margin: 10px;
 }

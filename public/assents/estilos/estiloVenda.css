@@ -1,0 +1,70 @@
+body {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#menulinks {
+    background-color: rgb(57, 160, 192);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+#conteiner {
+    background-color: azure;
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#formulario {
+    margin: 30px;
+    background-color: rgb(117, 191, 214);
+    width: 500px;
+    padding: 10px;
+}
+
+#tabela {
+    background-color: rgb(117, 191, 214);
+    margin: 30px;
+    width: 1000px;
+    padding: 10px;
+}
+
+#menulinks button {
+    background: #0b5669; 
+    border-radius: 6px; 
+    padding: 15px; 
+    cursor: pointer; 
+    color: #fff; 
+    border: none; 
+    font-size: 20px;
+    margin: 10px;
+}
+
+#valor {
+    margin-left: 30px;
+}
+
+#total_venda{
+    margin-left: 500px;
+    background-color: rgb(87, 155, 175);
+    width: 150px;
+    padding: 10px;
+}
+#botao_finalizar{
+    background-color: green;
+    border-color: green;
+}
+#botao_cancelar{
+    background-color: red;
+    border-color: red;
+}
+
+#botao_adicionar{
+    background-color: green;
+    border-color: green;
+}
