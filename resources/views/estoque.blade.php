@@ -16,18 +16,16 @@
                   <label for="inputCity" class="form-label">Contra indicação</label>
                   <input type="text" class="form-control" id="inputCity">
                 </div>
-                <div class="col-md-4">
-                  <label for="inputState" class="form-label">Tipo</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>Selecionar</option>
-                    <option>Remédio</option>
-                    <option>Cosmético</option>
-                    <option>Higiene</option>
-                  </select>
+
                 </div>
                 <div class="col-md-2">
                   <label for="inputZip" class="form-label">Valor</label>
                   <input type="" class="form-control" id="inputZip">
+                </div>
+
+                <div class="col-md-2">
+                  <label for="inputZip" class="form-label">Quantidade</label>
+                  <input type="number" class="form-control" id="inputZip">
                 </div>
                
                 <div class="col-12">
@@ -49,61 +47,20 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($produtos as $produto)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Vitamix C 20ml</td>
-                    <td>vitaLab</td>
-                    <td>dengue e gestantes</td>
-                    <td>Remédio</td>
-                    <td>R$ 7,63</td>
-                    <td>3</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Fralda Pampers M</td>
-                    <td>Pampers</td>
-                    <td>não</td>
-                    <td>Higiene</td>
-                    <td>R$ 23,99</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Dipirona</td>
-                    <td>vitaLab</td>
-                    <td>dengue e gestantes</td>
-                    <td>Remédio</td>
-                    <td>R$ 5,38</td>
-                    <td>15</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Fralda Pampers G</td>
-                    <td>Pampers</td>
-                    <td>não</td>
-                    <td>Higiene</td>
-                    <td>R$ 33,99</td>
-                    <td>7</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Dorflex comprimidos</td>
-                    <td>vitaLab</td>
-                    <td>dengue e gestantes</td>
-                    <td>Remédio</td>
-                    <td>R$ 5,39</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Doralgina</td>
-                    <td>vitaLab</td>
-                    <td>dengue e gestantes</td>
-                    <td>Remédio</td>
-                    <td>R$ 2,50</td>
-                    <td>6</td>
-                  </tr>
-                  
+                    <td>{{$produto->nome}}</td>
+                    <td>{{$produto->fabricante}}</td>
+                    <td>{{$produto->contraIndi}}</td>
+                    <td>{{$produto->categoria->categoria}}</td>
+                    <td>{{$produto->Valor}}</td>
+                    <td>{{$produto->quantidade}}</td>
+                    <td>
+                      <a href="{{route('produtos.edicao', ['id' => $produto->id])}}">Editar</a>
+                      <a href="{{route('produtos.excluir', ['id' => $produto->id])}}">Excluir</a>
+                    </td>
+                  </tr>	
+                  @endforeach	
                 </tbody>
               </table>
         </div>

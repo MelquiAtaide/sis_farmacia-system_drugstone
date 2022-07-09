@@ -27,7 +27,9 @@ Route::get('/', function () {
 
 Route::get('/login', 'App\Http\Controllers\LoginController@login')->name("login");
 Route::post('/logar', 'App\Http\Controllers\LoginController@logar')->name("logar");
+Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name("logout");
 
+Route::middleware(['login'])->group(function () {
 Route::get('/index', 'App\Http\Controllers\IndexController@index')->name("index");
 Route::get('/estoque', 'App\Http\Controllers\EstoqueController@estoque')->name("estoque");
 Route::get('/venda', 'App\Http\Controllers\VendaController@venda')->name("venda");
@@ -35,3 +37,10 @@ Route::get('/cliente', 'App\Http\Controllers\ClienteController@cliente')->name("
 Route::get('/fornecedor', 'App\Http\Controllers\FornecedorController@fornecedor')->name("fornecedor");
 Route::get('/funcionario', 'App\Http\Controllers\FuncionarioController@funcionario')->name("funcionario");
 
+
+
+
+    Route::group(['prefix' => 'prosutos'], function () {
+        Route::get('/', 'EstoqueController@listar')->name('estoque.cadastrar');
+    });
+});

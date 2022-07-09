@@ -33,14 +33,18 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Valor</th>
                     <th scope="col">Quantidade</th>
+                    <th scope="col">Opções</th>
                   </tr>
                 </thead>
                 <tbody>
+                  
                   <tr>
                     <th scope="row">1</th>
                     <td>Vitamina C</td>
                     <td>R$ 7,63</td>
                     <td>3</td>
+                    <td>
+                    </td>
                   </tr>
                   
                 </tbody>
